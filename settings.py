@@ -10,7 +10,7 @@ SECRET_MELI_ID=os.getenv("SECRET_MELI_ID")
 CLIENT_ID=os.getenv("CLIENT_ID")
 CLIENT_SECRET=os.getenv("CLIENT_SECRET")
 REDIRECT_URI=os.getenv("REDIRECT_URI")
-code=os.getenv("code")
+FIRST_CODE=os.getenv("FIRST_CODE")
 
 USER_BITCRAM=os.getenv("USER_BITCRAM")
 PASSWRD_BITCRAM=os.getenv("PASSWRD_BITCRAM")

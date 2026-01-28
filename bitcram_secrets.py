@@ -37,4 +37,5 @@ def updating_bitcram_secrets():
             logger.info("Token Renovated Succesfully")
             
     except Exception as e:
-        enviar_mensaje_whapi(TOKEN_WHAPI, PHONE, e)
+        message = f"""Fallo en la renovacion del token de Bitcram el error fue: {e}"""
+        enviar_mensaje_whapi(TOKEN_WHAPI, PHONE, message)
