@@ -20,6 +20,7 @@ Configura las siguientes variables para habilitar la comunicación con las APIs 
 | **Meli** | `CLIENT_ID`, `CLIENT_SECRET`, `REDIRECT_URI` | Credenciales de la aplicación en Mercado Libre. |
 | **Bitcran** | `USER_BITCRAM`, `PASSWRD_BITCRAM` | Credenciales de acceso a la plataforma Bitcran. |
 | **Alertas** | `TOKEN_WHAPI`, `PHONE` | Token de Whapi y número de destino para alertas. |
+| **Run Bitcrtam** | `RUN_BITCRAM` | 1 = Corremos las creds de bitcram,  else no. |
 
 ### 2. Google Cloud Secret Manager
 

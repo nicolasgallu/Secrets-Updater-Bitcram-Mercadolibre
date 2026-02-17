@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
 PROJECT_ID=os.getenv("PROJECT_ID")
 SECRET_BITCRAM_ID=os.getenv("SECRET_BITCRAM_ID")
 SECRET_MELI_ID=os.getenv("SECRET_MELI_ID")
@@ -17,3 +16,5 @@ PASSWRD_BITCRAM=os.getenv("PASSWRD_BITCRAM")
 
 TOKEN_WHAPI=os.getenv("TOKEN_WHAPI")
 PHONE=os.getenv("PHONE")
+
+RUN_BITCRAM=os.getenv("RUN_BITCRAM")
