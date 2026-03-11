@@ -22,6 +22,7 @@ def renovate_token(client):
 
 
 def updating_bitcram_secrets():
+    logger.info("running secret updater")
 
     try:
         client = secretmanager.SecretManagerServiceClient()
