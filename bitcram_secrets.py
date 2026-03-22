@@ -3,6 +3,7 @@ import requests
 from logger import logger
 from google.cloud import secretmanager
 from notifications import enviar_mensaje_whapi
+from secrets_destruction import run_destruction 
 from settings import PROJECT_ID, SECRET_BITCRAM_ID, USER_BITCRAM, PASSWRD_BITCRAM, TOKEN_WHAPI, PHONE
 
 def renovate_token(client):
@@ -38,6 +39,7 @@ def updating_bitcram_secrets():
                 return  None
             else:
                 renovate_token(client)
+                run_destruction(PROJECT_ID, SECRET_BITCRAM_ID)
 
         except:
             renovate_token(client)

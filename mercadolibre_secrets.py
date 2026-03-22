@@ -3,6 +3,7 @@ import json
 from google.cloud import secretmanager
 from logger import logger
 from notifications import enviar_mensaje_whapi
+from secrets_destruction import run_destruction 
 from settings import PROJECT_ID, SECRET_MELI_ID, CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, FIRST_CODE, TOKEN_WHAPI, PHONE
 
 #JSON STRUCTURE TO SECRET MANAGER.
@@ -75,6 +76,9 @@ def updating_meli_secrets():
         client.add_secret_version(
             parent=f"projects/{PROJECT_ID}/secrets/{SECRET_MELI_ID}",
             payload= {"data":meli_secrets})
+        
+
+        run_destruction(PROJECT_ID, SECRET_MELI_ID)
         
     except Exception as e:
         logger.info("token renovation failed")
